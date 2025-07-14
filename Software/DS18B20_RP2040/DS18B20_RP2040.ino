@@ -2,7 +2,7 @@
 #include <DallasTemperature.h>
 
 // Data wire is plugged into pin 2 on the Arduino
-#define ONE_WIRE_BUS A1
+#define ONE_WIRE_BUS 26
 
 // Setup a oneWire instance to communicate with any OneWire devices
 OneWire oneWire(ONE_WIRE_BUS);
@@ -28,9 +28,7 @@ void setup() {
   if (!sensors.getAddress(Sensor1, 0)){
     Serial.println("Unable to find address for Device 1");
   }
-  if (!sensors.getAddress(Sensor2, 1)){
-    Serial.println("Unable to find address for Device 2");
-  }
+
 }
 
 void loop() 
@@ -41,7 +39,6 @@ void loop()
   // Call sensors.requestTemperatures() to issue a temperature
   // request to all devices on the bus
   printDataIndex(Sensor1,0);
-  printDataIndex(Sensor2,1);
 
 }
 // function to print a device address
