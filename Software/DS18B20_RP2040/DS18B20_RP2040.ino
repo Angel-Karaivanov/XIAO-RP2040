@@ -10,22 +10,22 @@ OneWire oneWire(ONE_WIRE_BUS);
 // Pass our oneWire reference to Dallas Temperature sensor
 DallasTemperature sensors(&oneWire);
 
-DeviceAddress Sensor1, Sensor2 ;
+DeviceAddress Sensor1 ;
 
-void setup() {
-  // Begin serial communication for output
-  Serial.begin(115200);
-  delay(5000);
+void setup() 
+{
+  Serial.begin(115200);   // Begin serial communication for output
+  delay(5000); 
   Serial.println("SYSSTART!");  
-  // Start up the library
   
-  sensors.begin();
+  sensors.begin(); // Start up the library
   
   Serial.print("Found ");
-  Serial.print(sensors.getDeviceCount(), DEC);
+  Serial.print(sensors.getDeviceCount(), DEC); //Get the device count 
   Serial.println(" devices."); 
 
-  if (!sensors.getAddress(Sensor1, 0)){
+  if (!sensors.getAddress(Sensor1, 0))
+  {
     Serial.println("Unable to find address for Device 1");
   }
 
@@ -78,7 +78,8 @@ void printData(DeviceAddress Sensor1){
   delay(1000);  
 }
 
-void printDataIndex(DeviceAddress address, int index){
+void printDataIndex(DeviceAddress address, int index) // Why "byIndex"? You can have more than one sensor on the same bus.
+{ 
   printAddress(address);
   Serial.print(" Device index: ");
   Serial.print(index);
@@ -90,7 +91,7 @@ void printDataIndex(DeviceAddress address, int index){
 
 void printTemperatureByIndex(int index)
 {
-  sensors.requestTemperaturesByIndex(index);
+  sensors.requestTemperaturesByIndex(index); 
   
   float temperatureC = sensors.getTempCByIndex(index);
   if (temperatureC == DEVICE_DISCONNECTED_C)
@@ -98,12 +99,10 @@ void printTemperatureByIndex(int index)
     Serial.println("Error: Could not read temperature data");
     return;
   }
-  Serial.print("Temperature: ");
+  Serial.print("Temperature: "); // Print the temperature in Celsius
   Serial.print(temperatureC);
   Serial.print(" C");
 }
-//void DallasTemperature::setUserDataByIndex(uint8_t deviceIndex, int16_t data) {
-//    DeviceAddress Sensor1;}
 
 
 
