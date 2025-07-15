@@ -33,23 +33,16 @@ void setup()
 
 void loop() 
 {
-  //Serial.print("Requesting temperatures...");
-  //sensors.requestTemperatures();
-  //Serial.println("DONE");
-  // Call sensors.requestTemperatures() to issue a temperature
-  // request to all devices on the bus
-  printDataIndex(Sensor1,0);
+  printDataIndex(Sensor1,0); //Print the data of the devices by index
 
 }
-// function to print a device address
-void printAddress(DeviceAddress Sensor1)
+void printAddress(DeviceAddress Sensor1)    // function to print a device address 
 {
   Serial.print("Device Address ");
   Serial.print(" :");
   for (uint8_t i = 0; i < 8; i++)
   {
-    // zero pad the address if necessary
-    if (Sensor1[i] < 16) Serial.print("0");
+    if (Sensor1[i] < 16) Serial.print("0"); // zero pad the address if necessary
     Serial.print(Sensor1[i], HEX);
   }
   Serial.print(", ");
@@ -57,9 +50,10 @@ void printAddress(DeviceAddress Sensor1)
 
 void printTemperature(DeviceAddress Sensor1)
 {
-  sensors.requestTemperaturesByAddress(Sensor1);
+  sensors.requestTemperaturesByAddress(Sensor1); // Call sensors.requestTemperatures() to issue a temperature
+                                                 // request to all devices on the bus
 
-  float temperatureC = sensors.getTempC(Sensor1);
+  float temperatureC = sensors.getTempC(Sensor1); //function to show error
   if (temperatureC == DEVICE_DISCONNECTED_C)
   {
     Serial.println("Error: Could not read temperature data");
@@ -70,7 +64,8 @@ void printTemperature(DeviceAddress Sensor1)
   Serial.print(" C");
 }
 
-void printData(DeviceAddress Sensor1){
+void printData(DeviceAddress Sensor1) //function to print the print the device data
+{
   printAddress(Sensor1);
   Serial.print(" ");
   printTemperature(Sensor1);
@@ -78,7 +73,7 @@ void printData(DeviceAddress Sensor1){
   delay(1000);  
 }
 
-void printDataIndex(DeviceAddress address, int index) // Why "byIndex"? You can have more than one sensor on the same bus.
+void printDataIndex(DeviceAddress address, int index) //function to print the device's index
 { 
   printAddress(address);
   Serial.print(" Device index: ");
@@ -89,11 +84,12 @@ void printDataIndex(DeviceAddress address, int index) // Why "byIndex"? You can 
   delay(1000);  
 }
 
-void printTemperatureByIndex(int index)
+void printTemperatureByIndex(int index) //function to print the temp by index
+                                        // Why "byIndex"? You can have more than one sensor on the same bus.
 {
   sensors.requestTemperaturesByIndex(index); 
   
-  float temperatureC = sensors.getTempCByIndex(index);
+  float temperatureC = sensors.getTempCByIndex(index); //function to show error
   if (temperatureC == DEVICE_DISCONNECTED_C)
   {
     Serial.println("Error: Could not read temperature data");
