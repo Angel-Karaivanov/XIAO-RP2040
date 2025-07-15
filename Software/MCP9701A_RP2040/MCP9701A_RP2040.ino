@@ -1,4 +1,4 @@
-const int tempSensorPin = A0; // Replace A0 with your chosen analog pin
+const int tempSensorPin = A2; // Replace A0 with your chosen analog pin
 
 void setup() {
   Serial.begin(115200);

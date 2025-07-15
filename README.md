@@ -1,6 +1,7 @@
 ## About XIAO RP2040
-[Raspberry Pi Pico](https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf) is a low-cost, high-performance microcontroller board with flexible digital interfaces. Key features include:
-ogramming using mass storage over USB
+[XIAO RP2040](https://wiki.seeedstudio.com/XIAO-RP2040/) is a compact, Arduino-compatible dev board based on Raspberry Pi RP2040. As the smallest Raspberry Pi Pico board, it features a thumb-sized and surface-mount design.
+ Key features include:
+
 - Powerful MCU: Dual-core ARM Cortex M0+ processor, flexible clock running up to 133 MHz
 - Rich on-chip resources: 264KB of SRAM, and 2MB of on-board Flash memory
 - Flexible compatibility: Support Micropython/Arduino/CircuitPython
@@ -28,5 +29,4 @@ Key features:
     - 2 SPI controllers
     - 2 I2C controllers
     - 16 PWM channels
-    - USB 1.1 controller and PHY, with host and device support
     - 8 PIO state machines

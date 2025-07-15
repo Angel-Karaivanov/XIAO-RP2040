@@ -11,8 +11,10 @@ The low-cost, low-power sensors feature an accuracy of ±1°C from +20°C to +70
 It uses a capacitive humidity sensor and a thermistor to measure the surrounding air and spits out a digital signal on the data pin 
 (no analog input pins needed). It's fairly simple to use but requires careful timing to grab data.
 ### Libraries for DHT11
-[DHT lib](https://github.com/adidax/dht11)
+- [DHT lib](https://github.com/adidax/dht11)
 ## Used Software
 - [Arduino IDE](https://www.arduino.cc/en/software/)  Version 2.3.6
-- [Arduino framework](https://docs.platformio.org/en/stable/frameworks/arduino.html) - Allows writing cross-platform software to control devices attached to a wide range of Arduino boards to create all kinds of creative coding, interactive objects, spaces or physical experiences.
 
+## RP2040 - RGB LED - WP154A4SEJ3VBDZGW
+[WP154A4SEJ3VBDZGW](https://www.digikey.com/en/products/detail/kingbright/WP154A4SEJ3VBDZGW-CA/6569334) is a 
+Red, Green, Blue (RGB) 625nm Red, 525nm Green, 470nm Blue LED Indication - Discrete 2.2V Red, 3.3V Green, 3.3V Blue Radial LED diodei9k
