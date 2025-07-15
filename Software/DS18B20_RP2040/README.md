@@ -1,12 +1,12 @@
 
-## DS18B20 
+## SINGLE_DS18B20 
 ```
  Device Address  :287E695F1000007F,  Device index: 0, Temperature: 27.69 C
  Device Address  :287E695F1000007F,  Device index: 0, Temperature: 27.75 C
  Device Address  :287E695F1000007F,  Device index: 0, Temperature: 27.75 C
  Device Address  :287E695F1000007F,  Device index: 0, Temperature: 27.81 C
 ```
-## Two_DS18B20
+## MULTIPLE_DS18B20
 ``` 
  SYSSTART!
  Found 2 devices.
