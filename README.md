@@ -1,18 +1,13 @@
 ## About XIAO RP2040
 [Raspberry Pi Pico](https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf) is a low-cost, high-performance microcontroller board with flexible digital interfaces. Key features include:
+ogramming using mass storage over USB
+- Powerful MCU: Dual-core ARM Cortex M0+ processor, flexible clock running up to 133 MHz
+- Rich on-chip resources: 264KB of SRAM, and 2MB of on-board Flash memory
+- Flexible compatibility: Support Micropython/Arduino/CircuitPython
+- Easy project operation: Breadboard-friendly & SMD design, no components on the back
+- Small size: As small as a thumb(20x17.5mm) for wearable devices and small projects.
+- Multiple interfaces: 11 digital pins, 4 analog pins, 11 PWM Pins,1 I2C interface, 1 UART interface, 1 SPI interface, 1 SWD Bonding pad interface.
 
-- RP2040 microcontroller chip designed by Raspberry Pi in the United Kingdom
-- Dual-core Arm Cortex M0+ processor, flexible clock running up to 133 MHz
-- 264kB of SRAM, and 2MB of on-board flash memory
-- USB 1.1 with device and host support
-- Low-power sleep and dormant modes
-- Drag-and-drop programming using mass storage over USB
-- 26 × multi-function GPIO pins
-- 2 × SPI, 2 × I2C, 2 × UART, 3 × 12-bit ADC, 16 × controllable PWM channels
-- Accurate clock and timer on-chip
-- Temperature sensor
-- Accelerated floating-point libraries on-chip
-- 8 × Programmable I/O (PIO) state machines for custom peripheral support
 
 ## About RP2040
 [RP2040](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf) is manufactured on a modern 40nm process node, delivering high performance, low dynamic power
