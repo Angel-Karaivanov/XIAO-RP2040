@@ -1,3 +1,3 @@
 ## Wiring
 
-![test](https://github.com/Angel-Karaivanov/XIAO-RP2040/blob/main/Documents/ANLG TSENS.jpg)
+![test](https://github.com/Angel-Karaivanov/XIAO-RP2040/blob/main/Documents/ANLG_TSENS.jpg)
